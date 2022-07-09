@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_yasg',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -134,6 +135,8 @@ USE_TZ = True
 # STATIC_URL = 'static/'
 # STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_URL = 'static/'
+STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 django_heroku.settings(locals())
 
 # Default primary key field type
@@ -177,3 +180,18 @@ SIMPLE_JWT = {
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'Users.UserModel'
+CORS_ALLOWED_ORIGINS = [
+    "https://www.test-cors.org",
+    "http://localhost:3000"
+]
+ACCESS_CONTROL_ALLOW_ORIGIN = "http://localhost:3000"
+ACCESS_CONTROL_ALLOW_CREDENTIALS = True
+ACCESS_CONTROL_ALLOW_METHODS = "POST"
+ACCESS_CONTROL_ALLOW_HEADERS = ["Origin", "Content-Type","Accept"]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:8000/',
+    # 'www.test2-cors.org',
+]
+
+CORS_ALLOW_CREDENTIALS = True
