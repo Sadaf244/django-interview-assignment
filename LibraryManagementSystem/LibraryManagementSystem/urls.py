@@ -3,7 +3,7 @@ from django.urls import path,include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-
+from Books import views
 schema_view = get_schema_view(
    openapi.Info(
       title="LMS API",
@@ -17,6 +17,7 @@ schema_view = get_schema_view(
    permission_classes=[permissions.AllowAny],
 ) 
 urlpatterns = [
+   path('', views.index),
    path('admin/', admin.site.urls),
    path('user/',include('Users.urls')),
    path('book/',include('Books.urls')),
