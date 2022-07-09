@@ -69,7 +69,7 @@ def MemberView(request):
                 return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST) 
     return Response({'message': 'You Have No Permission'},status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['DELETE'])
+@api_view(['GET','DELETE'])
 def DeleteAccountView(request):
     user = request.user
     if user.Role=="MEMBER":

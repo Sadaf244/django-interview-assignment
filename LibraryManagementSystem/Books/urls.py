@@ -2,7 +2,7 @@ from django.urls import path
 from .views import *
 urlpatterns = [
     path('GetUpdateDeleteBook/',BookView),
-    #http://localhost:8000/book/GetUpdateDeleteBook/?id=1
+    #https://my-application-library.herokuapp.com/book/GetUpdateDeleteBook/?id=3
     path('BookCreate/',BookCreateView.as_view(), name='BookCreateView'),
     #https://my-application-library.herokuapp.com/book/BookCreate/
     path('readbook/',ReadView),
