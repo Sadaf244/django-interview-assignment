@@ -7,6 +7,6 @@ urlpatterns = [
     #http://localhost:8000/user/login/
     path('getupdatedeletemember/',MemberView),
     #http://localhost:8000/user/getupdatedeletemember/
-     path('deleteaccount/',DeleteAccountView),
+    path('deleteaccount/',DeleteAccountView),
     #http://localhost:8000/user/deleteaccount/
 ]
