@@ -12,6 +12,7 @@ Install All Packages:
 7.pip install gunicorn
 8.pip install django-heroku
 9.pip install whitenoise
+10.pip install -U drf-yasg
 
 Super User Credentials:
   Username:member
