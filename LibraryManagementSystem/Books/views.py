@@ -2,22 +2,13 @@ from .serializers import *
 from rest_framework import generics, status
 from rest_framework.decorators import api_view
 from .models import *
-from django.shortcuts import get_object_or_404,redirect
-from django.db.models import Max
-from django.http.response import JsonResponse
+from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework import status,permissions
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from Users.permissions import *
-from django.db.models import Sum
-from django.db.models import Q
-from datetime import date
-from django.shortcuts import render
-from rest_framework.generics import GenericAPIView
 
-def index(request):
-    return render(request, "index.html")
+
 
 class BookCreateView(generics.CreateAPIView): #to create patient registration
     authentication_classes=[JWTAuthentication]
