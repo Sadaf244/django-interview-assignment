@@ -4,12 +4,12 @@ urlpatterns = [
     path('GetUpdateDeleteBook/',BookView),
     #http://localhost:8000/book/GetUpdateDeleteBook/?id=1
     path('BookCreate/',BookCreateView.as_view(), name='BookCreateView'),
-    #http://localhost:8000/book/BookCreate/
+    #https://my-application-library.herokuapp.com/book/BookCreate/
     path('readbook/',ReadView),
-    #http://localhost:8000/book/readbook/
+    #https://my-application-library.herokuapp.com/book/readbook/
     path('returnbook/',ReadDeleteView),
-    #http://localhost:8000/book/returnbook/
+    #https://my-application-library.herokuapp.com/book/returnbook/?id=1
     path('viewbook/',BookListView.as_view(), name='BookView'),
-    #http://localhost:8000/book/viewbook/
+    #https://my-application-library.herokuapp.com/book/viewbook/
    
 ]

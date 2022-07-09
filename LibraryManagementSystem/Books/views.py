@@ -45,7 +45,7 @@ def BookView(request):
             serializer=BookSerializer(book,data=request.data,partial=True)
             if serializer.is_valid():
                 serializer.save()
-                return Response(serializer.data)
+                return Response({"messege":"Updated Successfully"},serializer.data)
             else:
                 return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST) 
     return Response({'message': 'You Have No Permission'},status=status.HTTP_400_BAD_REQUEST)

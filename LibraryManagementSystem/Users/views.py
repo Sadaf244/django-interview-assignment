@@ -60,7 +60,7 @@ def MemberView(request):
             users.delete() 
             return Response({'message': 'User record was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
         elif request.method == 'PUT':
-            user = users.filter(id=user_id,Role="MEMBER").first() #get first entry of user with that ID
+            users = users.filter(id=user_id,Role="MEMBER").first() #get first entry of user with that ID
             serializer=UserSerializer(users,data=request.data,partial=True)
             if serializer.is_valid():
                 serializer.save()
