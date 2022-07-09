@@ -17,7 +17,7 @@ import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR =os.path.join(BASE_DIR, 'templates')
+
 
 
 # Quick-start development settings - unsuitable for production

@@ -16,8 +16,6 @@ from datetime import date
 from django.shortcuts import render
 from rest_framework.generics import GenericAPIView
 
-def index(request):
-    return render(request, "index.html")
 
 class BookCreateView(generics.CreateAPIView): #to create patient registration
     authentication_classes=[JWTAuthentication]
