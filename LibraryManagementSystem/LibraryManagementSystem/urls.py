@@ -22,5 +22,5 @@ urlpatterns = [
    path('',include('Users.urls')),
    path('book/',include('Books.urls')),
    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-   #http://localhost:8000/swagger/ 
+   #https://my-application-library.herokuapp.com/swagger/ 
 ]
