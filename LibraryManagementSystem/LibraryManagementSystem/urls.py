@@ -19,8 +19,8 @@ schema_view = get_schema_view(
 urlpatterns = [
  
    path('admin/', admin.site.urls),
-   path('users/', views.index),
-   path('',include('Users.urls')),
+   path('',views.index),
+   path('users/',include('Users.urls')),
    path('book/',include('Books.urls')),
    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
    #https://my-application-library.herokuapp.com/swagger/
