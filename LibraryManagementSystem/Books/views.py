@@ -7,8 +7,12 @@ from rest_framework.response import Response
 from rest_framework import status,permissions
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from Users.permissions import *
+from django.shortcuts import render
 
 
+
+def index(request):
+    return render(request, "templates/index.html")
 
 class BookCreateView(generics.CreateAPIView): #to create patient registration
     authentication_classes=[JWTAuthentication]
