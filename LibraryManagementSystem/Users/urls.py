@@ -4,9 +4,9 @@ urlpatterns = [
     path('',SignupView.as_view(),name='signup'),
     #https://my-application-library.herokuapp.com
     path('login/',CustomAuthToken.as_view(),name='login'),
-    #https://my-application-library.herokuapp.com/users/login/
+    #https://my-application-library.herokuapp.com/login/
     path('getupdatedeletemember/',MemberView),
-    #https://my-application-library.herokuapp.com/users/getupdatedeletemember/
+    #https://my-application-library.herokuapp.com/getupdatedeletemember/
     path('deleteaccount/',DeleteAccountView),
-    #https://my-application-library.herokuapp.com/users/deleteaccount/
+    #https://my-application-library.herokuapp.com/deleteaccount/
 ]
