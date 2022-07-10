@@ -12,7 +12,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "templates/index.html")
+    return render(request, "index.html")
 
 class BookCreateView(generics.CreateAPIView): #to create patient registration
     authentication_classes=[JWTAuthentication]
